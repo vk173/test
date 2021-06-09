@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Oswald&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <title>Галерея</title>
+  </head>
+  <body>
+    <div id="app">
+      <header>
+        <div id="output" class="logo">
+          <h1>Галерея изображений</h1>
+        </div>
+        <dialog id="test">
+        <div id="drop-area">
+        <div class="my-form">
+          <p>Загрузите файлы с помощью перетаскивания изображений в пунктирную область или воспользуйтесь формой загрузки</p>
+          <input type="file" multiple id="input__image" accept="image/jpeg,image/png,image/gif" title="Загрузка картинок" onchange="handleFiles(this.files)">
+          <label for="input__image">
+            <span class="icon"><svg width="16" height="16" viewBox="0 0 16 16"><path fill="currentColor" d="M1 14v2h14v-2H1z M2 7h3v5h6V6.969L14 7L8 1L2 7z"></path></svg></span>
+            Загрузить изображения с диска
+          </label>
+
+          <input type="file" id="input__text" accept="application/json" title="Загрузка изображений" onchange="handleFiles(this.files)">
+          <label for="input__text">
+            <span class="icon"><svg width="16" height="16" viewBox="0 0 16 16"><path fill="currentColor" fill-rule="evenodd" d="m8,0c-4.418281,0 -8,3.581722 -8,8c0,4.418278 3.581719,8 8,8c4.418281,0 8,-3.581722 8,-8c0,-4.418278 -3.581719,-8 -8,-8zm-6,4l12,0l0,2l-12,0l0,-2zm0,3l12,0l0,2l-12,0l0,-2zm0,3l12,0l0,2l-12,0l0,-2z"></path></svg></span>
+            Загрузить изображения списком из файла
+          </label>
+          <input id="add__url" type="url" placeholder="Введите url" onkeydown="if(event.keyCode === 13) handleUrl(this.value)"><button class="input-url__submit" type="submit" onclick="handleUrl(add__url.value)" value="Отправить">
+              Добавить url</button>
+        </div>
+        <progress id="progress-bar" max=100 value=0></progress>
+        <div id="gallery__info"></div>
+      </div>
+      <div id="cancel" onclick="test.close()"></div>
+    </dialog>
+      </header>
+      <div class="gallery">
+        <ul id="gallery__all">
+          <li><div id="add" onclick="test.showModal()"></div></li>
+        </ul>
+      </div>
+    </div>
+    <div id="basket"></div>
+    <script src="main.js"></script>
+  </body>
+</html>
