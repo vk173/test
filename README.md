@@ -15,4 +15,5 @@
 <p>Start the server</p>
 <code>node node.js</code>
 <h2>Frontend</h2>
+<p align="center"><img src="https://github.com/vk173/test/test.gif"></p>
 <h3><a href="https://vk173.github.io/test" target="_blank">Demo</a></h3>
