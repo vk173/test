@@ -12,6 +12,7 @@
   }
 <h2>Settings</h2>
 <h3>Admin panel</h3>
-<p align="center">Start the server<code>node node.js</code></p>
+<p>Start the server</p>
+<code>node node.js</code>
 <h2>Frontend</h2>
 <h3><a href="https://vk173.github.io/test" target="_blank">Demo</a></h3>
