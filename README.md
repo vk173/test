@@ -10,3 +10,8 @@
     "multer": "^1.4.2",
     "request": "^2.88.2"
   }
+<h2>Settings</h2>
+<h3>Admin panel</h3>
+<p align="center">Start the server<code>node node.js</code></p>
+<h2>Frontend</h2>
+<h3><a href="https://vk173.github.io/test" target="_blank">Demo</a></h3>
